@@ -13,6 +13,7 @@ public class Campaign {
 
         String name;
         Category category;
+        Type type;
 
         public List<Product> discount(List<Product> products){
                 return null;

@@ -1,4 +1,5 @@
 import campaign.Campaign;
+import campaign.Category;
 import product.Product;
 
 import java.util.ArrayList;
@@ -19,5 +20,17 @@ public class Application {
 
     public Double calculateFinalPrice(List<Product> products, List<Campaign> campaigns) {
         return null;
+    }
+
+    public void validateCampaign(List<Campaign> campaigns){
+        if(campaigns.isEmpty()){
+            return;
+        }
+        Category temp = campaigns.get(0).getCategory();
+        for(Campaign campaign:campaigns){
+           if(!temp.equals(campaign.getCategory())){
+               throw new IllegalArgumentException("Campaigns must belong to the same category");
+           }
+        }
     }
 }
