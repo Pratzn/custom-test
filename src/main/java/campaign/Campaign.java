@@ -8,7 +8,6 @@ import product.Product;
 import java.util.List;
 @Builder
 @Data
-@AllArgsConstructor
 public class Campaign {
 
         String name;
